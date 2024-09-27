@@ -1,15 +1,19 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
+
 const maxRecords = 151
 const limit = 10
-let offset = 0;
+let offset = 0; 
 
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
+        <span class="number">#${pokemon.number}</span>
+        <button type="button" class="detailsButton">
             <span class="name">${pokemon.name}</span>
+        </button>
+
 
             <div class="detail">
                 <ol class="types">
@@ -19,6 +23,10 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
+
+        <span class="especs">Peso: ${pokemon.weight}</span>
+        <span class="especs">Altura: ${pokemon.height}</span>
+
         </li>
     `
 }
@@ -43,5 +51,11 @@ loadMoreButton.addEventListener('click', () => {
         loadMoreButton.parentElement.removeChild(loadMoreButton)
     } else {
         loadPokemonItens(offset, limit)
+    }
+})
+
+pokemonList.addEventListener('click', (event) => {
+    if (button = event.target.closest('.detailsButton')) {
+        console.log("Rodou");
     }
 })

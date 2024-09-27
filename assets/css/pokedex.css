@@ -78,6 +78,19 @@
     background-color: #f9aec7;
 }
 
+.especs {
+    display: flex;           /* Define layout flexível */
+    justify-content: space-between; /* Espaçamento entre altura e peso */
+    align-items: center;     /* Alinhamento vertical */
+    padding: 8px 12px;       /* Espaçamento interno */
+    margin-top: 12px;        /* Espaçamento superior */
+    font-size: 14px;         /* Tamanho do texto */
+    background-color: #f4f4f4; /* Fundo levemente cinza */
+    border-radius: 8px;      /* Bordas arredondadas */
+    color: #333;             /* Cor do texto */
+    font-weight: bold;       /* Texto em negrito */
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
@@ -88,9 +101,19 @@
 
 .pokemon .number {
     color: #000;
-    opacity: .3;
+    opacity: 0.3;
     text-align: right;
     font-size: .625rem;
+}
+
+.pokemon .detailsButton {
+    opacity: 1;
+    text-align: right;
+    width: 4rem;
+    padding: 0rem;
+    background: none;
+    border: none;
+    left: 1rem;
 }
 
 .pokemon .name {
