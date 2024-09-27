@@ -24,8 +24,8 @@ function convertPokemonToLi(pokemon) {
                      alt="${pokemon.name}">
             </div>
 
-        <span class="especs">Peso: ${pokemon.weight}</span>
-        <span class="especs">Altura: ${pokemon.height}</span>
+        <span class="especs">Peso: ${pokemon.weight}hg</span>
+        <span class="especs">Altura: ${pokemon.height}dec</span>
 
         </li>
     `
